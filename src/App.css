@@ -1,0 +1,28 @@
+ 
+ @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+ * {
+    margin: 0;
+    padding: 0;
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #18181B;
+}
+html {
+    scroll-behavior: smooth;
+    
+  }
+
+  @keyframes rotate-border {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  .animate-border {
+    animation: rotate-border 4s linear infinite;
+  }
