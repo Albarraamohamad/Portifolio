@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Web3 from "./assests/Screenshot 2025-04-15 015800.png";
 import Ecoomerse from "./assests/Screenshot 2025-04-15 020321.png";
 import netflix from "./assests/Screenshot 2025-04-15 020554.png";
+import Weather from "./assests/Screenshot 2025-05-02 152709.png";
+import crative from "./assests/Screenshot 2025-05-02 152304.png";
+import coffe from "./assests/Screenshot 2025-05-02 153004.png";
 import { IoEnter } from "react-icons/io5";
 
 export default function ToggleSection() {
@@ -22,27 +24,50 @@ export default function ToggleSection() {
       link: "https://netflix-drab-nu.vercel.app/",
     },
     {
+      title: "Crativo",
+      desc: "Cravito Website For Design Agency",
+      img: crative,
+      link: "https://criativo-eight.vercel.app/",
+    },
+    {
+      title: "Weather App",
+      desc: "Weather App for finding weather by country using API.",
+      img: Weather,
+      link: "https://weather-app-one-rho-34.vercel.app/",
+    },
+    {
       title: "Web3 App",
       desc: "DApp using blockchain and wallet connect.",
       img: Web3,
       link: "https://web-3-eta.vercel.app/",
     },
-    
-   
+    {
+      title: "Coffee",
+      desc: "Coffee project for a cafe, showing items and menu.",
+      img: coffe,
+      link: "https://coffe-project-eight.vercel.app/",
+    },
   ];
 
   const baseCardStyles =
     "rounded-lg border p-4 text-white border-cyan-400 shadow-[0_0_8px_#0ff] transition duration-300";
 
   return (
-    <section id="section2" className="   ">
+    <section id="section2">
       <div className="rounded-xl min-h-screen">
-        <h1 className="text-4xl font-bold mb-10">My Work Hilight</h1>
+        <h1 className="text-4xl font-bold mb-10">My Work Highlight</h1>
+
         {/* Cards Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4 mb-6">
+        <div
+          className={`grid gap-4 mb-6 ${
+            showAll
+              ? "grid-cols-2 md:grid-cols-3"
+              : "grid-cols-1 sm:grid-cols-2"
+          }`}
+        >
           {(showAll ? projects : projects.slice(0, 2)).map((project, index) => (
             <div key={index} className={baseCardStyles}>
-              <img src={project.img} alt="" className="rounded-md" />
+              <img src={project.img} alt={project.title} className="rounded-md" />
               <h1 className="mt-4 text-xl font-bold">{project.title}</h1>
               <p className="mt-2 text-gray-300">{project.desc}</p>
               <div className="flex justify-between mt-5 items-center">
@@ -52,9 +77,15 @@ export default function ToggleSection() {
                 >
                   React
                 </h1>
-                <Link to={project.link} className="mr-2 text-3xl">
+                <a
+                  href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mr-2 text-3xl"
+                  title="Visit"
+                >
                   <IoEnter />
-                </Link>
+                </a>
               </div>
             </div>
           ))}
