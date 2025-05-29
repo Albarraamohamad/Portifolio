@@ -18,6 +18,15 @@ import {Link } from 'react-router-dom'
 import Footer from "./Footer";
 
 const Home = () => {
+       const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = './ALBARRAA-MOHAMED-FlowCV-Resume-20250529 (1).pdf'; // Make sure 'cv.pdf' is inside the public folder
+    link.download = 'My-CV.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+
   const [isOpen, setIsOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("home");
 
@@ -61,7 +70,10 @@ const Home = () => {
       activeSection === id ? "bg-white text-black" : "hover:bg-white/20"
     }`;
 
+ 
+
   return (
+    
     <div className="text-white relative">
       <div className="  bottom-2 right-2 fixed">
         <Link to='https://api.whatsapp.com/send/?phone=201067114551&type=phone_number&app_absent=0'>
@@ -167,9 +179,12 @@ const Home = () => {
             </h1>
           </div>
 
-          <button className="mt-10 flex items-center gap-2 bg-blue-600 py-2 px-4 rounded-lg text-black hover:text-white transition duration-500 hover:bg-blue-600 hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.7)]">
-            Download CV <FaDownload />
-          </button>
+           <button
+      onClick={handleDownload}
+      className="mt-10 flex items-center gap-2 bg-blue-600 py-2 px-4 rounded-lg text-black hover:text-white transition duration-500 hover:bg-blue-600 hover:shadow-[0_0_15px_5px_rgba(59,130,246,0.7)]"
+    >
+      Download CV <FaDownload />
+    </button>
         </div>
 
         {/* Right Side - Image */}
