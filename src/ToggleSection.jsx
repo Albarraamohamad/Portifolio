@@ -5,6 +5,7 @@ import netflix from "./assests/Screenshot 2025-04-15 020554.png";
 import Weather from "./assests/Screenshot 2025-05-02 152709.png";
 import crative from "./assests/Screenshot 2025-05-02 152304.png";
 import coffe from "./assests/Screenshot 2025-05-02 153004.png";
+import fiore from './assests/Screenshot 2025-06-12 194308.png'
 import { IoEnter } from "react-icons/io5";
 
 export default function ToggleSection() {
@@ -47,6 +48,12 @@ export default function ToggleSection() {
       img: coffe,
       link: "https://coffe-project-eight.vercel.app/",
     },
+     {
+      title: "FIORE",
+      desc: "Blossom Webiste To Store in USE To Sell A Blossom",
+      img: fiore,
+      link: "https://fiore-kappa.vercel.app/",
+    }
   ];
 
   const baseCardStyles =

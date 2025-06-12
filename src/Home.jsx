@@ -20,7 +20,7 @@ import Footer from "./Footer";
 const Home = () => {
        const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = './ALBARRAA-MOHAMED-FlowCV-Resume-20250529 (1).pdf'; // Make sure 'cv.pdf' is inside the public folder
+    link.href = './ALBARRAA-MOHAMED-FlowCV-Resume-20250612.pdf'; // Make sure 'cv.pdf' is inside the public folder
     link.download = 'My-CV.pdf';
     document.body.appendChild(link);
     link.click();
