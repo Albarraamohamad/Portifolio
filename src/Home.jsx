@@ -221,7 +221,7 @@ const Home = () => {
               <FaPlus className="text-blue-500 text-xl" />
 
               <div className="ml-12">
-                <h1 className="text-4xl">1</h1>
+                <h1 className="text-4xl">2</h1>
                 <span className="text-xs absolute">Year of Experince</span>
               </div>
               <FaPlus className="text-blue-500 text-xl" />
