@@ -5,8 +5,9 @@ import netflix from "./assests/Screenshot 2025-04-15 020554.png";
 import Weather from "./assests/Screenshot 2025-05-02 152709.png";
 import crative from "./assests/Screenshot 2025-05-02 152304.png";
 import coffe from "./assests/Screenshot 2025-05-02 153004.png";
-import fiore from './assests/Screenshot 2025-06-12 194308.png'
-import arce from './assests/Screenshot 2025-06-23 003631.png'
+import fiore from './assests/Screenshot 2025-06-12 194308.png';
+import arce from './assests/Screenshot 2025-06-23 003631.png';
+import prime from './assests/Screenshot 2025-07-24 022603.png'
 import { IoEnter } from "react-icons/io5";
 
 export default function ToggleSection() {
@@ -60,6 +61,12 @@ export default function ToggleSection() {
       desc: "ARCE Website Talking About How Can Ai Powerd Growwing",
       img: arce ,
       link: "https://arce.vercel.app/",
+    },
+    {
+      title: "PRIME.M AGENCY",
+      desc: "Portfolio Website For Media Buying Agency  ",
+      img: prime ,
+      link: "https://prime-m-agency.vercel.app/",
     }
   ];
 
